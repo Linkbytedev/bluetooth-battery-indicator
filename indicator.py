@@ -10,7 +10,7 @@ import os
 import threading
 
 CURRENT_VERSION = "1.0.0"
-GITHUB_REPO = "USERNAME/REPO" # Replace with your GitHub username/repository
+GITHUB_REPO = "imcomfyaaaaaa/bluetooth-battery-indicator" # Replace with your GitHub username/repository
 
 
 def get_bluetooth_batteries():
@@ -119,7 +119,9 @@ def update_loop(icon):
                     if b['percentage'] <= 20 and b['name'] not in notified_devices:
                         try:
                             subprocess.Popen(['notify-send', '-u', 'critical', 'Bluetooth Battery Low', f"{b['name']} is at {b['percentage']}%"])
-                            subprocess.Popen(['gio', 'play', '/usr/share/bluetooth-battery-indicator/we-o_rd35hn_mbnylqzn15-battery-490734.mp3'])
+                            mp3_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'we-o_rd35hn_mbnylqzn15-battery-490734.mp3')
+                            if os.path.exists(mp3_path):
+                                subprocess.Popen(['gio', 'play', mp3_path])
                         except Exception:
                             pass
                         notified_devices.add(b['name'])
