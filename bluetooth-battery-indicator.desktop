@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=Bluetooth Battery Indicator
+Comment=System tray icon for Bluetooth battery level
+Exec=python3 /home/dominic/.gemini/antigravity/scratch/bluetooth-battery-indicator/indicator.py
+Icon=bluetooth
+Terminal=false
+Type=Application
+Categories=Utility;
+StartupNotify=false
