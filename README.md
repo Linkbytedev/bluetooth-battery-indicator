@@ -16,6 +16,14 @@ Designed to work across **ALL Linux distributions** (Ubuntu, Fedora, Arch Linux,
 
 You can install this app on any Linux distribution (Ubuntu, Arch Linux, Fedora, Linux Mint, etc.) using the universal install script!
 
+### The Quick Way (One-Line Install)
+Open your terminal and paste this command to download and install the app automatically:
+
+```bash
+git clone https://github.com/imcomfyaaaaaa/bluetooth-battery-indicator.git && cd bluetooth-battery-indicator && chmod +x install.sh && ./install.sh
+```
+
+### The Manual Way
 1. Download or clone this repository to your computer.
 2. Open your terminal inside the downloaded folder.
 3. Run the installer script:
