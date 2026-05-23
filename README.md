@@ -20,7 +20,7 @@ You can install this app on any Linux distribution (Ubuntu, Arch Linux, Fedora, 
 Open your terminal and paste this command to download and install the app automatically:
 
 ```bash
-git clone https://github.com/imcomfyaaaaaa/bluetooth-battery-indicator.git && cd bluetooth-battery-indicator && chmod +x install.sh && ./install.sh
+git clone https://github.com/Linkbytedev/bluetooth-battery-indicator.git && cd bluetooth-battery-indicator && chmod +x install.sh && ./install.sh
 ```
 
 ### The Manual Way
