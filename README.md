@@ -38,5 +38,3 @@ The script will automatically:
 - Use your system's package manager (`apt`, `dnf`, `pacman`, `zypper`) to install the required dependencies safely.
 - Install the app to your `~/.local/share` folder.
 - Add a shortcut to your application launcher and set it to run on boot!
-
-*(If you are on Ubuntu/Debian and prefer a `.deb` package, check the Releases tab on the right to download the `.deb` file).*
