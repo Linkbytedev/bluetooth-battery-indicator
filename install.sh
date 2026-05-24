@@ -37,8 +37,8 @@ echo "Copying files..."
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 cp "$SCRIPT_DIR/indicator.py" "$INSTALL_DIR/"
 
-if [ -f "$SCRIPT_DIR/we-o_rd35hn_mbnylqzn15-battery-490734.mp3" ]; then
-    cp "$SCRIPT_DIR/we-o_rd35hn_mbnylqzn15-battery-490734.mp3" "$INSTALL_DIR/"
+if [ -f "$SCRIPT_DIR/batterylow.mp3" ]; then
+    cp "$SCRIPT_DIR/batterylow.mp3" "$INSTALL_DIR/"
 fi
 
 # 4. Set up Python Virtual Environment (cross-distro safe python packaging)
