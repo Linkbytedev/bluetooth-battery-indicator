@@ -10,7 +10,7 @@ import os
 import threading
 
 CURRENT_VERSION = "1.0.0"
-GITHUB_REPO = "imcomfyaaaaaa/bluetooth-battery-indicator" # Replace with your GitHub username/repository
+GITHUB_REPO = "Linkbytedev/bluetooth-battery-indicator" # Replace with your GitHub username/repository
 
 
 def get_bluetooth_batteries():
