@@ -130,8 +130,6 @@ def update_loop(icon):
                         
                 menu_items.append(pystray.Menu.SEPARATOR)
                 menu_items.append(pystray.MenuItem("Check for Updates", check_for_updates))
-                menu_items.append(pystray.MenuItem("Exit", lambda *args: icon.stop()))
-                
                 icon.menu = pystray.Menu(*menu_items)
                 icon.title = f"{lowest['name']}: {lowest['percentage']}%"
             else:
@@ -139,8 +137,7 @@ def update_loop(icon):
                 icon.menu = pystray.Menu(
                     pystray.MenuItem("No devices connected", lambda *args: None),
                     pystray.Menu.SEPARATOR,
-                    pystray.MenuItem("Check for Updates", check_for_updates),
-                    pystray.MenuItem("Exit", lambda *args: icon.stop())
+                    pystray.MenuItem("Check for Updates", check_for_updates)
                 )
                 icon.title = "Bluetooth Battery: Disconnected"
                 
@@ -155,8 +152,7 @@ def main():
     icon.menu = pystray.Menu(
         pystray.MenuItem("Starting...", lambda *args: None),
         pystray.Menu.SEPARATOR,
-        pystray.MenuItem("Check for Updates", check_for_updates),
-        pystray.MenuItem("Exit", lambda *args: icon.stop())
+        pystray.MenuItem("Check for Updates", check_for_updates)
     )
     icon.title = "Bluetooth Battery"
     
