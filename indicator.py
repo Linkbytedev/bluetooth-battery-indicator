@@ -5,6 +5,7 @@ from PIL import Image, ImageDraw, ImageFont
 import pystray
 import subprocess
 import urllib.request
+import urllib.error
 import json
 import os
 import threading
@@ -67,6 +68,11 @@ def check_for_updates(icon, item):
                     subprocess.Popen(['notify-send', 'Bluetooth Battery Indicator', 'No .deb file found in the latest release.'])
             else:
                 subprocess.Popen(['notify-send', 'Bluetooth Battery Indicator', 'You are already up to date!'])
+        except urllib.error.HTTPError as e:
+            if e.code == 404:
+                subprocess.Popen(['notify-send', 'Bluetooth Battery Indicator', 'No releases found on GitHub yet.'])
+            else:
+                subprocess.Popen(['notify-send', 'Bluetooth Battery Indicator', f'Update failed: {e}'])
         except Exception as e:
             subprocess.Popen(['notify-send', 'Bluetooth Battery Indicator', f'Update failed: {e}'])
             
